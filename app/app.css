@@ -1,25 +1,58 @@
 /* app css stylesheet */
 
-.menu {
+h1 {
+  text-align: center;
+  margin: 30px
+}
+.input-box, .month{
+  width: 300px;
+  margin: 20px auto;
+}
+
+.calendar {
+  overflow: hidden;
+}
+
+.month-label {
+  text-align: center;
+}
+
+.day-label,
+.days-box {
   list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+  overflow: hidden;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
-.menu:before {
-  content: "[";
+.day-label li,
+.day {
+  float: left;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  vertical-align: middle;
+}
+.days-list {
+  list-style: none;
+  overflow: hidden;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
-.menu:after {
-  content: "]";
+.day {
+  background-color: #ccc;
+  border: 1px solid #fff;
 }
 
-.menu > li {
-  display: inline;
+.day.hasData {
+  background-color: #c6db8a;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.day.isWeekend {
+  background-color: #fcf72d;
 }
+
+

@@ -1,0 +1,24 @@
+<h1>Calendar App</h1>
+<div class="input-box">
+    <label for="startDate">Start Date: </label>
+    <input type="text" id="startDate" ng-model="startDate" placeholder="MM/DD/YYYY">
+</div>
+<div class="input-box">
+    <label for="numDays">Number of Days: </label>
+    <input type="text" id="numDays" ng-model="numDays">
+</div>
+<div class="calendar">
+    <div class="month" ng-repeat="month in months">
+        <ul class="day-label">
+            <li>S</li><li>M</li><li>T</li><li>W</li><li>T</li><li>F</li><li>S</li>
+        </ul>
+        <div class="month-label">
+            {{month[0].monthLabel}}
+        </div>
+        <ul class="days-list">
+            <li class="day" ng-repeat="day in month track by $index" ng-class="day.css">
+                {{day.day}}
+            </li>
+        </ul>
+    </div>
+</div>
